@@ -1,0 +1,41 @@
+/* 레이아웃 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    width: 100vw;
+}
+
+header .logo {
+    height: 50px;
+    background: #1ABC9C;
+    /* text-align: center;
+    padding-top: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo h1{
+    font-size: 24px;
+    font-weight: normal;
+}
+
+header .logo h1 a { color: white; }
+
+header .gnb {
+
+}
