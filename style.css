@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    background: #ccc;
+    /* background: #ccc; */
 }
 
 a {
@@ -18,6 +18,7 @@ a {
 header {
     /* width: 100%; */
     width: 100vw;
+    box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
 }
 
 header .logo {
@@ -51,7 +52,6 @@ header .gnb ul {
 header .gnb ul li {
     width: 33.33%;
     /* border: 1px solid red; */
-    
 }
 
 header .gnb ul li a {
@@ -66,3 +66,61 @@ header .gnb ul li a {
 header .gnb ul li.active {
     border-bottom: 3px solid #fff;
 }
+
+#main {
+    /* 수직 | 수평 여백 */
+    padding: 20px 15px;
+}
+
+#main h1 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#main .list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#main .list li {
+    /* 계산함수: 50% - 7.5px 
+        칼럼 여백이 늘어난 만큼 칼럼의 크기를 빼줘야 맞음
+    */
+    width: calc(50% - 7.5px);
+    border: 2px solid #333;
+    margin-bottom: 20px;
+
+    /* 부모가 자식 요소들의 position 위치 기준을 잡음 */
+    position: relative;
+}
+
+
+/* 홀수 li 선택 - 우측 여백 */
+#main .list li:nth-child(odd) {
+    margin-right: 7.5px;
+}
+
+/* 짝수 li 선택 - 좌측 여백 */
+#main .list li:nth-child(even) {
+    margin-left: 7.5px;
+}
+
+#main .list li img {
+    width: 100%;
+    display: block;
+}
+
+#main .list li a h4 {
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+    background: rgba(0,0,0, 0.75);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
